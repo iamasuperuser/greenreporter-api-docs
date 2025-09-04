@@ -1,0 +1,107 @@
+site_name: GreenReporter API Documentation
+site_description: Comprehensive API documentation for GreenReporter.eu sustainability reporting platform
+site_url: https://greenreporter.eu/docs
+repo_url: https://github.com/greenreporter/api-docs
+repo_name: GreenReporter API Docs
+
+theme:
+  name: material
+  palette:
+    primary: green
+    accent: light green
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+    - content.action.edit
+    - content.action.view
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil
+    view: material/eye
+  logo: assets/logo.svg
+  favicon: assets/favicon.ico
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Quick Start: quick-start.md
+    - Authentication: authentication.md
+  - API Reference:
+    - Complete Reference: api-reference.md
+    - OpenAPI Specification: openapi-spec.md
+  - Integration Guides:
+    - SDK Guides: sdk-integration.md
+    - Webhook Integration: webhook-integration.md
+  - Advanced Features:
+    - Rate Limiting: rate-limiting.md
+    - API Versioning: api-versioning.md
+    - Pagination & Filtering: pagination-filtering.md
+  - Support:
+    - Troubleshooting: troubleshooting.md
+    - Error Handling: error-handling.md
+
+plugins:
+  - search
+  - git-revision-date-localized
+  - mkdocstrings
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __line
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.snippets
+  - admonition
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/greenreporter
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/greenreporter
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/company/greenreporter
+
+  version:
+    provider: mike
+    default: latest
+
+  analytics:
+    provider: google
+    property: G-XXXXXXXXXX
+
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're looking for. With your consent, you're helping us to
+      make our documentation better.
+
+  generator: false

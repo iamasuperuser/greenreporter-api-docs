@@ -1,5 +1,3 @@
-# greenreporter-api-docs
-API documentation for GreenReporter.eu
 # GreenReporter API Documentation
 
 This repository contains the public-facing API documentation for GreenReporter.eu, the leading sustainability reporting platform for EU compliance.
